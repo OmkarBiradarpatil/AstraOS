@@ -1,7 +1,6 @@
 import {
   Activity,
   Archive,
-  Bot,
   Clapperboard,
   HeartPulse,
   LayoutDashboard,
@@ -24,7 +23,6 @@ const navItems = [
   { to: '/health', label: 'Health', icon: HeartPulse },
   { to: '/vault', label: 'Vault', icon: Archive },
   { to: '/entertainment', label: 'Entertainment', icon: Clapperboard },
-  { to: '/assistant', label: 'Assistant', icon: Bot },
   { to: '/settings', label: 'Settings', icon: Settings },
 ]
 
@@ -35,7 +33,6 @@ const pageTitles: Record<string, string> = {
   '/health': 'Health Optimization',
   '/vault': 'Vault',
   '/entertainment': 'Entertainment Hub',
-  '/assistant': 'AYNTK Assistant',
   '/settings': 'Settings',
 }
 

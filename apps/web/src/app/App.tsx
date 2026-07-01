@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { ProtectedRoute } from '../features/auth/ProtectedRoute'
 import { LoginPage } from '../features/auth/LoginPage'
-import { AssistantPage } from '../features/assistant/AssistantPage'
 import { DashboardPage } from '../features/dashboard/DashboardPage'
 import { EntertainmentPage } from '../features/entertainment/EntertainmentPage'
 import { FocusTubePage } from '../features/focustube/FocusTubePage'
@@ -26,7 +25,6 @@ function AppRoutes() {
           <Route path="/health" element={<HealthPage />} />
           <Route path="/vault" element={<VaultPage />} />
           <Route path="/entertainment" element={<EntertainmentPage />} />
-          <Route path="/assistant" element={<AssistantPage />} />
           <Route path="/settings" element={<SettingsPage />} />
         </Route>
       </Route>
