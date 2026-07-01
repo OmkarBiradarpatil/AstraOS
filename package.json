@@ -1,0 +1,33 @@
+{
+  "name": "astraos",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "npm@11.6.2",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "bootstrap": "npm ci --prefix apps/web && npm ci --prefix backend",
+    "clean:artifacts": "node scripts/clean-artifacts.mjs",
+    "dev": "npm --prefix apps/web run dev",
+    "backend:dev": "npm --prefix backend run dev",
+    "backend:build": "npm --prefix backend run build",
+    "backend:test": "npm --prefix backend run test",
+    "build": "npm --prefix apps/web run build",
+    "e2e": "npm --prefix apps/web run e2e",
+    "lint": "npm --prefix apps/web run lint",
+    "smoke:providers": "npm --prefix backend run smoke:providers",
+    "test": "npm --prefix apps/web run test",
+    "test:e2e:clerk": "npm --prefix apps/web run test:e2e:clerk",
+    "test:e2e": "npm --prefix apps/web run test:e2e",
+    "test:e2e:install": "npm --prefix apps/web run test:e2e:install",
+    "verify:audit": "npm --prefix apps/web run audit:high && npm --prefix backend run audit:high",
+    "verify:backend": "npm --prefix backend run verify",
+    "verify:release": "npm run verify:web && npm run verify:backend && npm run verify:audit",
+    "verify:release:e2e": "npm run verify:release && npm run verify:web:e2e",
+    "verify:web": "npm --prefix apps/web run verify",
+    "verify:web:e2e": "npm --prefix apps/web run verify:e2e",
+    "preview": "npm --prefix apps/web run preview"
+  }
+}

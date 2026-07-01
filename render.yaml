@@ -1,0 +1,65 @@
+services:
+  - type: web
+    name: astraos-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/ready
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ASTRAOS_ALLOW_DEV_AUTH
+        value: false
+      - key: ASTRAOS_JSON_LIMIT
+        value: 1mb
+      - key: ASTRAOS_REQUIRED_PROVIDERS
+        value: clerk,mongo,cloudinary,redis,openrouter
+      - key: ASTRAOS_OPS_TOKEN
+        sync: false
+      - key: ASTRAOS_TRUST_PROXY
+        value: true
+      - key: WEB_ORIGIN
+        sync: false
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: CLERK_WEBHOOK_SECRET
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB_NAME
+        value: astraos
+      - key: MONGODB_MAX_POOL_SIZE
+        value: 10
+      - key: MONGODB_MIN_POOL_SIZE
+        value: 0
+      - key: MONGODB_SERVER_SELECTION_TIMEOUT_MS
+        value: 5000
+      - key: MONGODB_SOCKET_TIMEOUT_MS
+        value: 30000
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: openrouter/free
+      - key: OPENROUTER_MODEL_FALLBACKS
+        value: ""
+      - key: OPENROUTER_MODELS
+        value: ""
+      - key: OPENROUTER_TIMEOUT_MS
+        value: 8000
+      - key: OPENROUTER_CACHE_SECONDS
+        value: 300
+      - key: OPENROUTER_FAIL_CLOSED
+        value: false

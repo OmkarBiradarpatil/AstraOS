@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+coverage/
+**/coverage/
+
+# Test and verification artifacts
+apps/web/test-artifacts/
+apps/web/playwright-report/
+apps/web/test-results/
+apps/web/blob-report/
+backend/test-artifacts/
+backend/tests/artifacts/
+backend/test-results/
+tests/artifacts/
+test-artifacts/
+playwright-report/
+test-results/
+blob-report/
+*.trace.zip
+lcov.info
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+.envrc
+.envrc.local
+*.local
+apps/web/.env.e2e.clerk
+apps/web/playwright/.clerk/
+apps/web/playwright/.auth/
+apps/web/.auth/
+.clerk/
+**/.clerk/
+**/storage-state*.json
+**/*storageState*.json
+apps/web/test-artifacts/auth/
+provider-smoke-report*.json
+**/provider-smoke-report*.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Tool caches
+.turbo/
+.vite/
+*.tsbuildinfo
+node_modules/.tmp/
+**/node_modules/.tmp/
+.vercel/
+.render/
+supabase/.branches/
+supabase/.temp/
+supabase/.cache/
